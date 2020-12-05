@@ -1,0 +1,17 @@
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\NUnit3.TestAdapter.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\NUnit3.TestAdapter.pdb
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\nunit.engine.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\nunit.engine.api.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\nunit.engine.core.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\AutomationTest.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\AutomationTest.pdb
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\nunit.framework.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\WebDriver.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\nunit.framework.pdb
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\nunit.framework.xml
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\bin\x64\Debug\WebDriver.xml
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\obj\x64\Debug\AutomationTest.csproj.CoreCompileInputs.cache
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\obj\x64\Debug\AutomationTest.csproj.CopyComplete
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\obj\x64\Debug\AutomationTest.dll
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\obj\x64\Debug\AutomationTest.pdb
+C:\Users\Lakshay\source\repos\AutomationTesting\AutomationTest\obj\x64\Debug\AutomationTest.csprojAssemblyReference.cache
