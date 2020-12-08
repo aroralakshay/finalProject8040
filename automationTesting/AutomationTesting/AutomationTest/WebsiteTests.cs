@@ -15,7 +15,7 @@ namespace AutomationTest
         public void Test_Add_Sell()
         {
             IWebDriver chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "http://34.219.12.221:3000/sell";
+            chromeDriver.Url = "http://35.161.142.191:3000/sell";
 
             chromeDriver.FindElement(By.LinkText("New Customer")).Click();
             int beforAddCount = (int)chromeDriver.FindElements(By.XPath("//table/tbody/tr"))?.Count;
@@ -43,7 +43,7 @@ namespace AutomationTest
         public void Test_ViewSell()
         {
             IWebDriver chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "http://34.219.12.221:3000/sell/add";
+            chromeDriver.Url = "http://35.161.142.191:3000/sell/add";
 
             chromeDriver.FindElement(By.Id("2")).Click();
 
@@ -57,7 +57,7 @@ namespace AutomationTest
         public void Test_Search()
         {
             IWebDriver chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "http://34.219.12.221:3000/sell/search";
+            chromeDriver.Url = "http://35.161.142.191:3000/sell/search";
             chromeDriver.FindElement(By.Id("search_bar")).SendKeys("testmodel2");
             chromeDriver.FindElement(By.Id("btnSearch")).Click();
 
@@ -74,7 +74,7 @@ namespace AutomationTest
         public void Test_Add_Email_Format()
         {
             IWebDriver chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "http://34.219.12.221:3000/sell/add";
+            chromeDriver.Url = "http://35.161.142.191:3000/sell/add";
             chromeDriver.FindElement(By.Id("email")).SendKeys("neha");
             chromeDriver.FindElement(By.CssSelector("input[type='submit']")).Click();
             string email = chromeDriver.FindElement(By.Id("email")).Text;
@@ -96,7 +96,7 @@ namespace AutomationTest
         public void Test_Add_Year_Format()
         {
             IWebDriver chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "http://34.219.12.221:3000/sell/add";
+            chromeDriver.Url = "http://35.161.142.191:3000/sell/add";
             chromeDriver.FindElement(By.Id("year")).SendKeys(" ");
             chromeDriver.FindElement(By.CssSelector("input[type='submit']")).Click();
             string year = chromeDriver.FindElement(By.Id("year")).Text;
