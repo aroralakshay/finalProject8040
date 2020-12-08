@@ -10,10 +10,12 @@ namespace AutomationTest
     public class WebsiteTests
     {
         [Test]
+
+        //This test case will be verifying add functionality
         public void Test_Add_Sell()
         {
             IWebDriver chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "http://34.219.12.221:3000/";
+            chromeDriver.Url = "http://34.219.12.221:3000/sell";
 
             chromeDriver.FindElement(By.LinkText("New Customer")).Click();
             int beforAddCount = (int)chromeDriver.FindElements(By.XPath("//table/tbody/tr"))?.Count;
@@ -37,6 +39,7 @@ namespace AutomationTest
         }
 
         [Test]
+        //This test case will be verifying view functionality
         public void Test_ViewSell()
         {
             IWebDriver chromeDriver = new ChromeDriver();
@@ -50,6 +53,7 @@ namespace AutomationTest
         }
 
         [Test]
+        //This test case will be verifying search functionality
         public void Test_Search()
         {
             IWebDriver chromeDriver = new ChromeDriver();
@@ -66,6 +70,7 @@ namespace AutomationTest
         }
 
         [Test]
+        //This test case will be verifying email validation message
         public void Test_Add_Email_Format()
         {
             IWebDriver chromeDriver = new ChromeDriver();
@@ -87,14 +92,15 @@ namespace AutomationTest
 
 
         [Test]
+        //This testcase will be verifying empty input field for year
         public void Test_Add_Year_Format()
         {
             IWebDriver chromeDriver = new ChromeDriver();
             chromeDriver.Url = "http://34.219.12.221:3000/sell/add";
-            chromeDriver.FindElement(By.Id("year")).SendKeys("2000");
+            chromeDriver.FindElement(By.Id("year")).SendKeys(" ");
             chromeDriver.FindElement(By.CssSelector("input[type='submit']")).Click();
             string year = chromeDriver.FindElement(By.Id("year")).Text;
-           if(year != "")
+           if(year == "")
             {
                 Assert.Pass();
             } else
