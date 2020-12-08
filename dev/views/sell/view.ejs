@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customers</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<a href="/sell" class="btn btn-primary ml-3">Home</a>
+<form>
+  <div class="form-group">
+    <label><b>Name: </b></label>
+    <label id="name"><%= data.name%></label>
+  </div>
+  <div class="form-group">
+    <label><b>Address: </b></label>
+    <label><%= data.address%></label>
+  </div>
+  <div class="form-group">
+    <label><b>City: </b></label>
+    <label><%= data.city%></label>
+  </div>
+  <div class="form-group">
+    <label><b>Phone Number: </b></label>
+    <label><%= data.phoneNumber%></label>
+  </div>
+  <div class="form-group">
+    <label><b>Email: </b></label>
+    <label><%= data.email%></label>
+  </div>
+  <div class="form-group">
+    <label><b>Make: </b></label>
+    <label><%= data.make%></label>
+  </div>
+  <div class="form-group">
+    <label><b>Model: </b></label>
+    <label><%= data.model%></label>
+  </div>
+  <div class="form-group">
+    <label><b>Year: </b></label>
+    <label><%= data.year%></label>
+  </div>
+  </form>
+</body>
+</html>

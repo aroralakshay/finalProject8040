@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add new sell record</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <a href="/sell">Home</a>
+  <% if (messages.error) { %>
+    <p style="color:red"><%- messages.error %></p>
+  <% } %>
+  <form action="/sell/add" method="post" name="form1">
+    <div class="form-group">
+    <input type="text" class="form-control" name="name" id="name" value="" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="address" id="address" value="" placeholder="Address">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="city" id="city" value="" placeholder="City">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" value="" placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="">
+    </div>
+    <div class="form-group">
+        <input type="make" name="make" class="form-control" id="make" placeholder="Make" value="">
+    </div>
+    <div class="form-group">
+        <input type="model" name="model" class="form-control" id="model" placeholder="Model" value="">
+    </div>
+    <div class="form-group">
+        <input type="year" name="year" class="form-control" id="year" placeholder="Year" value="">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Sell">
+</form>
+<br>
+  <table class="table">
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Make</th>
+    <th scope="col">Model</th>
+    <th width="200px">Year</th>
+  </tr>
+</thead>
+<tbody>
+  <% if(data.length){
+  for(var i = 0; i< data.length; i++) {%>  
+  <tr>
+    <th scope="row"><%= (i+1) %></th>
+    <td><%= data[i].make%></td>
+    <td><%= data[i].model%></td>
+    <td><%= data[i].year%></td>
+    <td>
+      <a id="<%=data[i].id%>" class="btn btn-success link" href="../sell/view/<%=data[i].id%>">Link</a>                 
+    </td>
+  </tr>
+  <% }
+   }else{ %>
+       <tr>
+          <td colspan="3">No Records</td>
+       </tr>
+    <% } %>
+</tbody>
+</table>
+
+</body>
+</html>

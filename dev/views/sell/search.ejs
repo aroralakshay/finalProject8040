@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Customers</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      </head>      
+    <body>
+        <a href="/sell" class="btn btn-primary ml-3">Home</a>
+        <form action="/sell/search" method="post" name="form1">
+            <div class="form-group">
+                <input type="text" class="form-control" name="model" id="search_bar" value="" placeholder="Model">
+            </div>
+            <input id="btnSearch" type="submit" class="btn btn-primary" value="Search">
+        </form>
+
+        <br>
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Make</th>
+            <th scope="col">Model</th>
+            <th scope="col">Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% if(data.length){
+        for(var i = 0; i< data.length; i++) {%>  
+        <tr>
+            <td><%= data[i].name%></td>
+            <td><%= data[i].address%></td>
+            <td><%= data[i].city%></td>
+            <td><%= data[i].phoneNumber%></td>
+            <td><%= data[i].email%></td>
+            <td><%= data[i].make%></td>
+            <td><%= data[i].model%></td>
+            <td><%= data[i].year%></td>
+        </tr>
+        <% }
+
+        }else{ %>
+            <tr>
+                <td colspan="3">No Rows</td>
+            </tr>
+            <% } %>    
+
+        </tbody>
+        </table>
+    </body>
+</html>
