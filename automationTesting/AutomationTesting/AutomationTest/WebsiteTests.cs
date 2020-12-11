@@ -45,10 +45,10 @@ namespace AutomationTest
             IWebDriver firefoxDriver = new FirefoxDriver();
             firefoxDriver.Url = "http://35.161.142.191:3000/sell/add";
 
-            firefoxDriver.FindElement(By.Id("2")).Click();
+            firefoxDriver.FindElement(By.Id("38")).Click();
 
-            string expectResult = "sdfsd";
-            string actualResult = firefoxDriver.FindElement(By.Id("name")).Text;
+            string expectResult = "2020 Acura MDX";
+            string actualResult = firefoxDriver.FindElement(By.ClassName("page-heading")).Text;
             Assert.AreEqual(expectResult, actualResult);
         }
 
