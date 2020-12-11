@@ -58,7 +58,8 @@
     <td><%= data[i].model%></td>
     <td><%= data[i].year%></td>
     <td>
-      <a id="<%=data[i].id%>" class="btn btn-success link" href="../sell/view/<%=data[i].id%>">Link</a>                 
+      <!-- <a id="<%=data[i].id%>" class="btn btn-success link" href="../sell/view/<%=data[i].id%>">Link</a> -->
+      <a id="<%=data[i].id%>" class="btn btn-success link" href="https://www.jdpower.com/cars/<%= data[i].year%>/<%= data[i].make%>/<%= data[i].model%>">Link</a>                 
     </td>
   </tr>
   <% }
